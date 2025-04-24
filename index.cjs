@@ -3,6 +3,10 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');  // Importiere das cors-Paket
 
+const port = process.env.PORT || 8000
+
+
+
 const server = express();
 const router = jsonServer.router('db.json'); // Mock DB
 const middlewares = jsonServer.defaults();
@@ -98,7 +102,6 @@ server.post('/register', (req, res) => {
 server.use('/api', router);
 
 // Start server
-const PORT = 8000;
-server.listen(PORT, () => {
-  console.log(`Mock server running at http://localhost:${PORT}`);
+server.listen(port, () => {
+  console.log(`Mock server running at http://localhost:${port}`);
 });
