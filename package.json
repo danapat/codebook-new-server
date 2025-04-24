@@ -6,6 +6,9 @@
     "start": "npx json-server --watch db.json --port 8000 --middlewares ./node_modules/json-server-auth",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "23.x"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
