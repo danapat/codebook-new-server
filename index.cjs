@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');  // Importiere das cors-Paket
 
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000 
 
 
 
@@ -102,6 +102,7 @@ server.post('/register', (req, res) => {
 server.use('/api', router);
 
 // Start server
-server.listen(port, () => {
-  console.log(`Mock server running at http://localhost:${port}`);
+const PORT = 8000;
+server.listen(PORT, () => {
+  console.log(`Mock server running at http://localhost:${PORT}`);
 });
