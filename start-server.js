@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT
 
 const command = `npx json-server --watch db.json --port ${PORT} --middlewares ./node_modules/json-server-auth`;
 
