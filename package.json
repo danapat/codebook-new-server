@@ -4,6 +4,7 @@
   "main": "index.cjs",
   "scripts": {
     "start": "npx json-server --watch db.json --port 8000 --middlewares ./node_modules/json-server-auth",
+    "start-prod": "node start-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
