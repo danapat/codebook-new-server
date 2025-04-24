@@ -1,4 +1,4 @@
-const jsonServer = require('json-server');
+const jsonServer = require('./node_modules/json-server');
 const express = require('express');
 const path = require('path');
 const cors = require('cors');  // Importiere das cors-Paket
@@ -8,7 +8,7 @@ const router = jsonServer.router('db.json'); // Mock DB
 const middlewares = jsonServer.defaults();
 
 // Erlaube alle Ursprünge (CORS)
-server.use(cors());
+server.use(cors());  // Dies erlaubt Anfragen von jedem Origin, also auch von localhost:3000
 
 // JSON parser
 server.use(express.json());
