@@ -266,22 +266,16 @@
   ],
   "users": [
     {
-      "email": "aaa@gmail.com",
-      "password": "$2a$10$f9qPsm6DEgqHcrtpD/e4n.nQoyz7T6/95hYH7GfCVb9rkZHEdSE8G",
-      "name": "aaa",
+      "email": "someone@gmail.com",
+      "password": "learnreact",
+      "name": "Guest",
       "id": 1
     },
     {
-      "email": "valon@lushaj.dev",
-      "password": "$2a$10$g2o.0CEN42RK/CVtG9NXhOZe1LDixPalBBZ387bSgCkA7QjjdMT82",
-      "name": "Valon",
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$f9qPsm6DEgqHcrtpD/e4n.nQoyz7T6/95hYH7GfCVb9rkZHEdSE8G",
+      "name": "aaa",
       "id": 2
-    },
-    {
-      "email": "bla@bla.com",
-      "password": "$2a$10$rx8bBf/Q6uIgVaksrzbKReg.Jvlo6EdOxUx44wCTeI5k61toZwvCK",
-      "name": "bla",
-      "id": 3
     }
   ]
 }
