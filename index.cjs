@@ -97,6 +97,33 @@ server.post('/register', (req, res) => {
   res.status(201).json({ message: 'User registered successfully', user: newUser });
 });
 
+// Public route: Login user
+server.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Email and password are required' });
+  }
+
+  const user = server.db.get('users').find({ email, password }).value();
+
+  if (!user) {
+    return res.status(400).json({ error: 'Invalid email or password' });
+  }
+
+  // Dummy access token
+  res.status(200).json({
+    message: 'Login successful',
+    accessToken: 'devtoken',
+    user: {
+      id: user.id,
+      email: user.email,
+      username: user.username
+    }
+  });
+});
+
+
 // Mount router for default routes
 server.use('/api', router);
 
