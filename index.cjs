@@ -100,13 +100,13 @@ server.post('/register', (req, res) => {
 // Public route: Login user
 server.post('/login', (req, res) => {
   const { email, password } = req.body;
-
+  console.log("Login Request:", req.body); // Debugging Log für die Anfrage
   if (!email || !password) {
     return res.status(400).json({ error: 'Email and password are required' });
   }
 
   const user = server.db.get('users').find({ email, password }).value();
-
+  console.log("Matched User:", user); // Debugging Log für den gefundenen Benutzer
   if (!user) {
     return res.status(400).json({ error: 'Invalid email or password' });
   }
@@ -116,9 +116,9 @@ server.post('/login', (req, res) => {
     message: 'Login successful',
     accessToken: 'devtoken',
     user: {
-      id: user.id,
       email: user.email,
-      username: user.username
+      password: user.password,
+      name: user.name
     }
   });
 });
