@@ -116,8 +116,8 @@ server.post('/login', (req, res) => {
     message: 'Login successful',
     accessToken: 'devtoken',
     user: {
+      id: user.id,
       email: user.email,
-      password: user.password,
       name: user.name
     }
   });
